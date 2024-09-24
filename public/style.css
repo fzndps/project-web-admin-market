@@ -1,16 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300);
 
-body{
-    height: 100vh;
-    overflow: hidden;
-    font-family: "Poppins";
-  background: #0e2941;
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins";
+  background: #C0EBA6;
 }
+
 .login-page {
   width: 400px;
   padding: 8% 0 0;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
+
 .form {
   position: relative;
   z-index: 1;
@@ -22,6 +27,7 @@ body{
   border-radius: 15px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
   font-family: "Poppins", sans-serif;
   outline: 0;
@@ -33,13 +39,14 @@ body{
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
-  
+
 }
+
 .form button {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #234666;
+  background: #347928;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -50,18 +57,33 @@ body{
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+
+.form button:hover,
+.form button:active,
+.form button:focus {
   background: #0e2941;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
+
 .form .message a {
   color: #234666;
   text-decoration: none;
 }
+
 .form .register-form {
   display: none;
+}
+
+.img {
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #347928;
 }
