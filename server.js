@@ -35,11 +35,11 @@ app.post('/login', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-   const { full_name, username, email, password } = req.body;
+   const { username, email, password } = req.body;
 
-   const sql = 'INSERT INTO register (full_name, username, email, password) VALUE (?, ?, ?, ?)'
+   const sql = 'INSERT INTO register ( username, email, password) VALUE (?, ?, ?)'
 
-   db.query(sql, [full_name, username, email, password], (reject, resolve) => {
+   db.query(sql, [username, email, password], (reject, resolve) => {
       if (reject) {
          return res.status(500).send('Eror saving user to database')
       }

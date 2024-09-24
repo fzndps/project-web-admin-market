@@ -2,7 +2,7 @@
 $('.register-form').on('submit', async function (e) {
    e.preventDefault();
    
-   const full_name = $('input[placeholder="Full Name *"]').val();
+
    const username = $('input[placeholder="Username *"]').val();
    const email = $('input[placeholder="Email *"]').val();
    const password = $('input[placeholder="Password *"]').val();
@@ -12,13 +12,12 @@ $('.register-form').on('submit', async function (e) {
       headers: {
          'Content-type': 'application/json',
       },
-      body: JSON.stringify({ full_name, username, email, password })
+      body: JSON.stringify({ username, email, password })
    });
 
    const result = await response.text();
    alert(result);
 
-   $('input[placeholder="Full Name *"]').val('');
    $('input[placeholder="Username *"]').val('');
    $('input[placeholder="Email *"]').val('');
    $('input[placeholder="Password *"]').val('');
