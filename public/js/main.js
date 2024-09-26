@@ -1,4 +1,4 @@
-
+//form register
 $('.register-form').on('submit', async function (e) {
    e.preventDefault();
    
@@ -23,6 +23,7 @@ $('.register-form').on('submit', async function (e) {
    $('input[placeholder="Password *"]').val('');
 });
 
+//penanganan form login
 $('.login-form').on('submit', async function(e) {
    e.preventDefault();
 
@@ -34,11 +35,16 @@ $('.login-form').on('submit', async function(e) {
        headers: {
            'Content-Type': 'application/json',
        },
-       body: JSON.stringify({ username, password })
+       body: JSON.stringify({ username, password }),
    });
 
-   const result = await response.text();
-   alert(result);
+   const result = await response.text()
+
+   if (response.ok) {
+      window.location.href = '/dashboard.html';
+   } else {
+      alert('Login failed' + result);
+   }
 });
 
 $('.message a').click(function(){
