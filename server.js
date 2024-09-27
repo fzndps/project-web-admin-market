@@ -65,10 +65,6 @@ app.post('/login', (req, res) => {
    })
 });
 
-app.get('/dashboard', (req, res) => {
-   res.send('Welcome to your dashboard');
-});
-
 
 app.listen(port, () => {
    console.log(`Server running at http://localhost:${port}`);
